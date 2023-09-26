@@ -1,0 +1,18 @@
+<div #avatar class="avatar" (click)="fileUpload.click()"
+    [ngClass]="{'is_changeable': isChangeable, 'no_event': !isChangeable}" [ngStyle]="{
+        width: width,
+        height: height,
+        'backgroundImage': 'url(' +  selectedFileUrl + ')',
+        'border-radius': borderRadius,
+        'background-size': previewSize,
+        'background-color': background
+    }">
+
+    <span *ngIf="!selectedFileUrl" #letter class="avatar__letters" [ngClass]="{'bold': isBold}">{{firstLetter}}</span>
+    <span *ngIf="!selectedFileUrl" #letter class="avatar__letters" [ngClass]="{'bold': isBold}">{{secondLetter}}</span>
+    <div *ngIf="isChangeable" class="avatar__change" [ngStyle]="{'background': backDropColor}" #containerContent>
+        <ng-content></ng-content>
+    </div>
+</div>
+
+<input #fileUpload type="file" class="file" [accept]="acceptTypes" (change)="selectFile($event)">

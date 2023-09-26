@@ -1,0 +1,17 @@
+    <ngx-avatar
+    [fullName]="'John Doe'"
+    [removeImage]="false"
+    [isChangeable]="true"
+    [isBold]="false"
+    [acceptTypes]="'image/jpeg, image/png, image/jpg, image/svg'"
+    [backDropColor]="'#00000099'"
+    [previewSize]="'cover'"
+    [background]="'#000000'"
+    [borderRadius]="'30px'"
+    [height]="'150px'"
+    [width]="'150px'"
+    (onFileSelectedEmitter$)="onFileSelectedEmitter($event)"
+  >
+<img class="camera" src="../assets/camera.png" alt="">
+</ngx-avatar>
+<button (click)="removeImage()">Remove</button>

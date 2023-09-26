@@ -1,0 +1,37 @@
+import { AfterViewInit, ElementRef, EventEmitter, OnChanges, QueryList } from '@angular/core';
+import * as i0 from "@angular/core";
+type PreviewSize = 'auto' | 'contain' | 'cover' | 'inherit' | 'initial' | 'revert' | 'unset' | '100% 100%';
+export declare class NgxDefaultAvatarComponent implements AfterViewInit, OnChanges {
+    avatar: ElementRef;
+    containerContent: ElementRef;
+    fileUpload: ElementRef;
+    letters: QueryList<ElementRef>;
+    fullName?: string;
+    imageURL: string;
+    removeImage: boolean;
+    isChangeable: boolean;
+    isBold: boolean;
+    acceptTypes: string;
+    backDropColor: string;
+    previewSize: PreviewSize;
+    background: string;
+    borderRadius: string;
+    height: string;
+    width: string;
+    onFileSelectedEmitter$: EventEmitter<File | null>;
+    selectedFileUrl: string | ArrayBuffer | null;
+    isContentAvailabe: boolean;
+    selectedFile: File | null;
+    secondLetter?: string;
+    firstLetter?: string;
+    ngAfterViewInit(): void;
+    ngOnChanges(): void;
+    selectFile(event: Event): void;
+    private getAvatar;
+    private getAvatarSize;
+    private calculateLettersSize;
+    private splitNameToLetters;
+    static ɵfac: i0.ɵɵFactoryDeclaration<NgxDefaultAvatarComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<NgxDefaultAvatarComponent, "ngx-avatar", never, { "fullName": { "alias": "fullName"; "required": false; }; "imageURL": { "alias": "imageURL"; "required": false; }; "removeImage": { "alias": "removeImage"; "required": false; }; "isChangeable": { "alias": "isChangeable"; "required": false; }; "isBold": { "alias": "isBold"; "required": false; }; "acceptTypes": { "alias": "acceptTypes"; "required": false; }; "backDropColor": { "alias": "backDropColor"; "required": false; }; "previewSize": { "alias": "previewSize"; "required": false; }; "background": { "alias": "background"; "required": false; }; "borderRadius": { "alias": "borderRadius"; "required": false; }; "height": { "alias": "height"; "required": false; }; "width": { "alias": "width"; "required": false; }; }, { "onFileSelectedEmitter$": "onFileSelectedEmitter$"; }, never, ["*"], false, never>;
+}
+export {};

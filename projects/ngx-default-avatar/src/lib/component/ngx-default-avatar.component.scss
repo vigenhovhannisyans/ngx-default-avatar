@@ -1,0 +1,51 @@
+.avatar {
+    min-width: 50px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-size: inherit;
+    background-position: center;
+    background-repeat: no-repeat;
+    &__letters {
+        font-size: 16px;
+        font-weight: 500;
+        color: white;
+
+        &.bold {
+            font-weight: 600;
+        }
+    }
+
+    &__change {
+        transition: all .2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #00000099;
+        opacity: 0;
+    }
+
+    &:hover {
+        .avatar__change {
+            opacity: 1;
+        }
+    }
+}
+
+.is_changeable {
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.file {
+    display: none;
+}
+
+.no_event {
+    pointer-events: none;
+}
